@@ -1,17 +1,31 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-bg: #09090b; /* Very dark navy / near black */
-  --color-brand-card: #18181b; /* Dark slate */
-  --color-brand-border: #27272a;
-  --color-brand-blue: #06b6d4; /* Cyan accent */
-  --color-brand-blue-hover: #0891b2;
-  --color-brand-text: #f4f4f5;
-  --color-brand-text-muted: #a1a1aa;
+  --font-sans: 'Inter', system-ui, sans-serif;
 }
 
 @layer base {
-  body {
-    @apply bg-[var(--color-brand-bg)] text-[var(--color-brand-text)] font-sans antialiased;
+  html {
+    scroll-behavior: smooth;
   }
+  body {
+    @apply bg-white text-[#525252] antialiased;
+  }
+}
+
+/* Base resets if Vite default styles were present */
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Keeping older theme variables just in case Docs page still uses them explicitly */
+:root {
+  --color-brand-bg: #09090b;
+  --color-brand-card: #18181b;
+  --color-brand-border: #27272a;
+  --color-brand-blue: #06b6d4;
+  --color-brand-blue-hover: #0891b2;
+  --color-brand-text: #a1a1aa;
+  --color-brand-text-muted: #71717a;
 }

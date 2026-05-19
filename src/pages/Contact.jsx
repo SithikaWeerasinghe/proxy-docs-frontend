@@ -1,94 +1,69 @@
-import PageHeader from '../components/PageHeader';
-import { Mail, MessageCircle, HelpCircle } from 'lucide-react';
-
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-[var(--color-brand-bg)]">
-      <PageHeader 
-        title="Contact Us" 
-        description="We're here to help. Get in touch with our support team or sales department."
-      />
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+    <div className="bg-[#FAFAFA] py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div className="text-center mb-16">
+          <span className="inline-block px-4 py-1.5 rounded-lg bg-[#E8FBF1] text-[#05C067] font-black text-xs uppercase tracking-widest mb-6">
+            Contact Us
+          </span>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-[#121118] tracking-tight mb-6">
+            We&apos;re here to help
+          </h1>
+          <p className="text-lg text-[#525252] max-w-2xl mx-auto">
+            Our technical support team is available 24/7 to assist with integration, proxy configuration, and custom enterprise plans.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
           
-          <div>
-            <h2 className="text-2xl font-bold text-white mb-6">Get in Touch</h2>
-            <p className="text-[var(--color-brand-text)] mb-8">
-              Whether you have a question about features, pricing, need a demo, or anything else, our team is ready to answer all your questions.
-            </p>
-            
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-[var(--color-brand-blue)]/10 text-[var(--color-brand-blue)] rounded-lg">
-                  <Mail className="h-6 w-6" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white">Email Support</h3>
-                  <p className="text-[var(--color-brand-text)]">support@proxyhub.example</p>
-                  <p className="text-sm text-[var(--color-brand-text-muted)] mt-1">We aim to reply within 24 hours.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-[var(--color-brand-blue)]/10 text-[var(--color-brand-blue)] rounded-lg">
-                  <MessageCircle className="h-6 w-6" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white">Live Chat</h3>
-                  <p className="text-[var(--color-brand-text)]">Available on your dashboard</p>
-                  <p className="text-sm text-[var(--color-brand-text-muted)] mt-1">Mon-Fri, 9am - 5pm EST.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-[var(--color-brand-blue)]/10 text-[var(--color-brand-blue)] rounded-lg">
-                  <HelpCircle className="h-6 w-6" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white">Documentation</h3>
-                  <p className="text-[var(--color-brand-text)]">Check our detailed API docs</p>
-                  <p className="text-sm text-[var(--color-brand-text-muted)] mt-1">Most questions are answered there.</p>
-                </div>
-              </div>
+          {/* Contact Info */}
+          <div className="space-y-8">
+            <div className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm">
+              <h3 className="text-xl font-bold text-[#121118] mb-2">Email Support</h3>
+              <p className="text-[#525252] mb-4">For general inquiries and technical support.</p>
+              <a href="mailto:support@catproxies.com" className="text-lg font-bold text-[#05C067] hover:underline">support@catproxies.com</a>
+            </div>
+            <div className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm">
+              <h3 className="text-xl font-bold text-[#121118] mb-2">Live Chat</h3>
+              <p className="text-[#525252] mb-4">Chat directly with our support team.</p>
+              <button className="text-lg font-bold text-[#246BFD] hover:underline">Open Live Chat</button>
             </div>
           </div>
-          
-          <div className="bg-[var(--color-brand-card)] rounded-xl border border-[var(--color-brand-border)] p-8">
-            <h3 className="text-xl font-semibold text-white mb-6">Send us a message</h3>
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-[var(--color-brand-text)] mb-1">Name</label>
-                <input type="text" id="name" className="w-full rounded-md border-[var(--color-brand-border)] bg-[var(--color-brand-bg)] text-white border px-4 py-2 focus:border-[var(--color-brand-blue)] focus:ring-[var(--color-brand-blue)] outline-none transition-colors" placeholder="John Doe" />
+
+          {/* Contact Form UI */}
+          <div className="bg-white p-10 rounded-[2.5rem] border border-gray-200 shadow-[0_20px_50px_rgba(0,0,0,0.05)]">
+            <h3 className="text-2xl font-extrabold text-[#121118] mb-8">Send us a message</h3>
+            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-bold text-[#121118] mb-2">First Name</label>
+                  <input type="text" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#05C067]/20 focus:border-[#05C067] transition-all" placeholder="Jane" />
+                </div>
+                <div>
+                  <label className="block text-sm font-bold text-[#121118] mb-2">Last Name</label>
+                  <input type="text" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#05C067]/20 focus:border-[#05C067] transition-all" placeholder="Doe" />
+                </div>
               </div>
-              
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-[var(--color-brand-text)] mb-1">Email</label>
-                <input type="email" id="email" className="w-full rounded-md border-[var(--color-brand-border)] bg-[var(--color-brand-bg)] text-white border px-4 py-2 focus:border-[var(--color-brand-blue)] focus:ring-[var(--color-brand-blue)] outline-none transition-colors" placeholder="john@example.com" />
+                <label className="block text-sm font-bold text-[#121118] mb-2">Email Address</label>
+                <input type="email" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#05C067]/20 focus:border-[#05C067] transition-all" placeholder="jane@example.com" />
               </div>
-              
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-[var(--color-brand-text)] mb-1">Subject</label>
-                <select id="subject" className="w-full rounded-md border-[var(--color-brand-border)] bg-[var(--color-brand-bg)] text-white border px-4 py-2 focus:border-[var(--color-brand-blue)] focus:ring-[var(--color-brand-blue)] outline-none transition-colors">
-                  <option>General Inquiry</option>
-                  <option>Technical Support</option>
-                  <option>Billing Question</option>
-                  <option>Sales & Enterprise</option>
-                </select>
+                <label className="block text-sm font-bold text-[#121118] mb-2">Message</label>
+                <textarea rows="4" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#05C067]/20 focus:border-[#05C067] transition-all" placeholder="How can we help you?"></textarea>
               </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-[var(--color-brand-text)] mb-1">Message</label>
-                <textarea id="message" rows="4" className="w-full rounded-md border-[var(--color-brand-border)] bg-[var(--color-brand-bg)] text-white border px-4 py-2 focus:border-[var(--color-brand-blue)] focus:ring-[var(--color-brand-blue)] outline-none transition-colors" placeholder="How can we help you?"></textarea>
-              </div>
-              
-              <button type="button" className="w-full bg-[var(--color-brand-blue)] hover:bg-[var(--color-brand-blue-hover)] text-white font-medium py-2 px-4 rounded-md transition-colors">
+              <button className="w-full py-4 bg-[#05C067] text-white font-extrabold rounded-xl hover:bg-[#04a055] transition-all shadow-[0_4px_14px_rgba(5,192,103,0.3)]">
                 Send Message
               </button>
+              <p className="text-xs text-center text-[#A8A8A8] mt-4">
+                // TODO: Connect contact form submission to backend later.
+              </p>
             </form>
           </div>
-          
+
         </div>
+
       </div>
     </div>
   );
