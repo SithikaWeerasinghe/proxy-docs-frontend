@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-bg: #09090b; /* Very dark navy / near black */
+  --color-brand-card: #18181b; /* Dark slate */
+  --color-brand-border: #27272a;
+  --color-brand-blue: #06b6d4; /* Cyan accent */
+  --color-brand-blue-hover: #0891b2;
+  --color-brand-text: #f4f4f5;
+  --color-brand-text-muted: #a1a1aa;
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--color-brand-bg)] text-[var(--color-brand-text)] font-sans antialiased;
+  }
+}
